@@ -1,0 +1,8 @@
+name: head-texture-painter
+description: Apply textures for player heads in survival
+author: Yoav TC
+
+data_pack:
+  pack_format: 121
+  load:
+    - src

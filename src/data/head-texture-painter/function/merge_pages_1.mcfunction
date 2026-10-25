@@ -1,0 +1,1 @@
+$function head-texture-painter:spawn_head {"value":"$(a)"}

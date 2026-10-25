@@ -1,0 +1,172 @@
+{
+	"criteria": {
+		"on_head_place": {
+			"trigger": "placed_block",
+			"conditions": {
+				"location": {
+					"type": "any_of",
+					"terms": [
+						{
+							"type": "all_of",
+							"terms": [
+								{
+									"type": "location_check",
+									"predicate": {
+										"block": {
+											"blocks": "player_head"
+										}
+									}
+								},
+								{
+									"type": "location_check",
+									"offsetY": -1,
+									"predicate": {
+										"block": {
+											"blocks": "lectern",
+											"state": {
+												"has_book": "true"
+											}
+										}
+									}
+								}
+							]
+						},
+						{
+							"type": "all_of",
+							"terms": [
+								{
+									"type": "location_check",
+									"predicate": {
+										"block": {
+											"blocks": "player_wall_head"
+										}
+									}
+								},
+								{
+									"type": "any_of",
+									"terms": [
+										{
+											"type": "all_of",
+											"terms": [
+												{
+													"type": "location_check",
+													"predicate": {
+														"block": {
+															"blocks": "player_wall_head",
+															"state": {
+																"facing": "north"
+															}
+														}
+													}
+												},
+												{
+													"type": "location_check",
+													"offsetZ": 1,
+													"predicate": {
+														"block": {
+															"blocks": "lectern",
+															"state": {
+																"has_book": "true"
+															}
+														}
+													}
+												}
+											]
+										},
+										{
+											"type": "all_of",
+											"terms": [
+												{
+													"type": "location_check",
+													"predicate": {
+														"block": {
+															"blocks": "player_wall_head",
+															"state": {
+																"facing": "south"
+															}
+														}
+													}
+												},
+												{
+													"type": "location_check",
+													"offsetZ": -1,
+													"predicate": {
+														"block": {
+															"blocks": "lectern",
+															"state": {
+																"has_book": "true"
+															}
+														}
+													}
+												}
+											]
+										},
+										{
+											"type": "all_of",
+											"terms": [
+												{
+													"type": "location_check",
+													"predicate": {
+														"block": {
+															"blocks": "player_wall_head",
+															"state": {
+																"facing": "east"
+															}
+														}
+													}
+												},
+												{
+													"type": "location_check",
+													"offsetX": -1,
+													"predicate": {
+														"block": {
+															"blocks": "lectern",
+															"state": {
+																"has_book": "true"
+															}
+														}
+													}
+												}
+											]
+										},
+										{
+											"type": "all_of",
+											"terms": [
+												{
+													"type": "location_check",
+													"predicate": {
+														"block": {
+															"blocks": "player_wall_head",
+															"state": {
+																"facing": "west"
+															}
+														}
+													}
+												},
+												{
+													"type": "location_check",
+													"offsetX": 1,
+													"predicate": {
+														"block": {
+															"blocks": "lectern",
+															"state": {
+																"has_book": "true"
+															}
+														}
+													}
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "head-texture-painter:_events/on_head_place"
+	}
+}
